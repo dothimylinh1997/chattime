@@ -31,7 +31,7 @@ const message = document.querySelector('#message'),
       socket.on('typing', data => {
         feedback.innerHTML = `<p><em>${data} is typing a message...</em></p>`;
         clearTimeout(timer);
-        timer = setTimeout(makeNoTypingState, 10000);
+        timer = setTimeout(makeNoTypingState, 2000);
       });
       function makeNoTypingState() {
         feedback.innerHTML = "";
